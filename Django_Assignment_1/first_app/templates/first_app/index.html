@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %} index page {% endblock %}
+{% block content %}
+   
+   
+    {% for meal in meals %}
+    <div style="display: inline-block; margin: 10px;">
+        <img src="{{ meal.strMealThumb }}" alt="{{ meal.strMeal }}" width="200" height="200">
+        <p>{{ meal.strMeal }}</p>
+    </div>
+{% endfor %}
+       
+   
+{% endblock %}
